@@ -60,8 +60,8 @@ https://web.azuresynapse.net/en/authoring/analyze/sqlscripts/view%20final%202?wo
 
 
 
--- CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'd8TySvmWr4rPBUk';
--- CREATE DATABASE SCOPED CREDENTIAL mayankadmin WITH IDENTITY = 'Managed Identity';
+--CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'd8TySvmWr4rPBUk';
+-- CREATE DATABASE SCOPED CREDENTIAL Tarunadmin WITH IDENTITY = 'Managed Identity';
 
 -- select * from sys.database_credentials
 
