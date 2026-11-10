@@ -39,6 +39,20 @@ FROM
 
 select * from gold.final
 
+create view gold.final2 
+as 
+SELECT
+     *
+FROM
+    OPENROWSET(
+        BULK 'https://olistdatastoragetarun.dfs.core.windows.net/olistdata/silver/final_df/',
+        FORMAT = 'PARQUET'
+    ) AS result2
+where order_status='delivered'
+
+
+select * from gold.final2
+
 
 
 https://web.azuresynapse.net/en/authoring/analyze/sqlscripts/view%20final%202?workspace=%2Fsubscriptions%2F733a395f-9cf9-4ddd-a694-4070e3581376%2FresourceGroups%2Fecomm-live%2Fproviders%2FMicrosoft.Synapse%2Fworkspaces%2Folist-synapse
