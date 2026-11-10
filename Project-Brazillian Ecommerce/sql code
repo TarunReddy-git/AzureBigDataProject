@@ -71,8 +71,8 @@ CREATE EXTERNAL FILE FORMAT extfileformat WITH (
 );
 
 CREATE EXTERNAL DATA SOURCE goldlayer WITH (
-    LOCATION = 'https://olistdatastorageaccount.dfs.core.windows.net/olistdata/gold/',
-    CREDENTIAL = mayankadmin
+    LOCATION = 'https://olistdatastoragetarun.dfs.core.windows.net/olistdata/gold/',
+    CREDENTIAL = Tarunadmin
 );
 
 
