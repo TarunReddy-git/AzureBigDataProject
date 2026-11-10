@@ -1,12 +1,11 @@
 
 -- https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-tables-cetas
-
 -- This is auto-generated code
 SELECT
     TOP 100 *
 FROM
     OPENROWSET(
-        BULK 'https://synapseolistdefault.dfs.core.windows.net/synapseolistfs/customers.csv',
+        BULK 'https://storagefilesynapse.dfs.core.windows.net/synapsestoragedefaultfiles/olist_customers_dataset.csv',
         FORMAT = 'CSV',
         PARSER_VERSION = '2.0'
     ) AS [result]
@@ -17,11 +16,10 @@ SELECT
      *
 FROM
     OPENROWSET(
-        BULK 'https://olistdatastorageaccount.dfs.core.windows.net/olistdata/silver/',
+        BULK 'https://olistdatastoragetarun.dfs.core.windows.net/olistdata/silver/final_df/',
         FORMAT = 'PARQUET'
     ) AS result1
-
---- https://olistdatastorageaccount.blob.core.windows.net/olistdata/silver
+--https://olistdatastoragetarun.blob.core.windows.net/olistdata/silver/final_df/_started_1969109121709641069
 
 
 
@@ -33,7 +31,7 @@ SELECT
      *
 FROM
     OPENROWSET(
-        BULK 'https://olistdatastorageaccount.dfs.core.windows.net/olistdata/silver/',
+        BULK 'https://olistdatastoragetarun.dfs.core.windows.net/olistdata/silver/final_df/',
         FORMAT = 'PARQUET'
     ) AS result1
 
